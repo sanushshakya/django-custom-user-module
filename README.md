@@ -1,5 +1,5 @@
 # DJANGO CUSTOM USER
-This is a custom user model for Django using django rest framework. It is a simple user model that is used to store user information.
+This is a custom user model for Django using django rest framework. It is a simple user model that is used to store user information. This project include rest framework simple jwt for authentication and restful api.
 
 ## To clone the project
 git clone https://github.com/yourusername/django-custom-user.git
@@ -26,6 +26,7 @@ git clone https://github.com/yourusername/django-custom-user.git
 - http://localhost:8000/api/auth/
 
 ## Environment Variables
+Add this to your .env file
 - DB_NAME=Your Database Name
 - DB_USER=Your Database User
 - DB_PASSWORD=Your Database Password
