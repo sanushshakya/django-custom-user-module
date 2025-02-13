@@ -18,7 +18,7 @@ from .models import CustomUser
 
 class AuthViewSet(ViewSet):
     
-    @action(detail=False, methods=["post"], permission_classes=[IsAdminUser])
+    @action(detail=False, methods=["post"], permission_classes=[AllowAny])
     def register(self, request):
         token = request.data.get("token")
         if not token:
@@ -98,7 +98,7 @@ class AuthViewSet(ViewSet):
 
         return json_response(data=None, message=serializer.errors, error=True, status=400)
     
-    @action(detail=False, methods=["delete"], permission_classes=[IsAdminUser])
+    @action(detail=False, methods=["delete"], permission_classes=[IsAuthenticated])
     def delete_account(self, request):
         user_id = request.query_params.get("user_id")
 
